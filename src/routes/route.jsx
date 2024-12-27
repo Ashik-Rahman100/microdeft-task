@@ -2,9 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import MainLayout from "../components/layout/MainLayout";
 import ProtectedRoute from "../components/layout/ProtectedRoute";
+import Profile from "../components/ui/Profile";
 import AllCourses from "../pages/AllCourses";
 import CreateCourse from "../pages/CreateCourse";
 import Login from "../pages/Login";
+import NotFound from "../pages/NotFound";
 import Register from "../pages/Register";
 
 const router = createBrowserRouter([
@@ -15,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
       {
         path: "/all-courses",
@@ -34,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <h2>404 Not Found</h2>,
+        element: <NotFound />,
       },
     ],
   },

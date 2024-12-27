@@ -24,7 +24,7 @@ export default function AllCourses() {
       });
   }, []);
 
-  console.log("Data", data);
+//   console.log("Data", data);
 
   if (loading) {
     return (

@@ -1,8 +1,27 @@
-# React + Vite
+# Project : online Course Provider
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link:
 
-Currently, two official plugins are available:
+## Feature:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Can Register his/her name,email,password
+- User can Login their credentials
+- User Log Out
+- Authorized user can see Courses
+- Authorized user can create new course
+- User can see their profile
+- Fully responsive desktop,tablet,mobile
+
+## Technology:
+
+- React Js
+- Tailwind css
+- Daisy UI
+- React-Router-Dom
+- react-toastify
+- js-cookie
+
+## Test
+
+- email: naim.microdeft@gmail.com
+- password: 12345678

@@ -98,14 +98,12 @@ export default function Header() {
               className="menu menu-sm dropdown-content bg-neutral text-white  z-[1] mt-5 w-52 p-4 shadow"
             >
               <li>
-                <a className="justify-between">
+                <Link to='/profile' className="justify-between">
                   Profile
                   <span className="badge">New</span>
-                </a>
+                </Link>
               </li>
-              <li>
-                <a>Settings</a>
-              </li>
+              
               <li className="bg-red-500 text-white">
                 <a onClick={() => logOut()}>Logout</a>
               </li>

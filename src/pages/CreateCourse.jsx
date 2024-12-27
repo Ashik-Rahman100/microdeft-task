@@ -30,6 +30,7 @@ export default function CreateCourse() {
       const result = await response.json();
       if (result.status_code === 200) {
         toast.success(result?.status_message);
+        e.reset()
       } else {
         toast.error(`Error: Something went wrong`);
       }

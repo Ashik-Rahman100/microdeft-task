@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 export default function CourseCard({ course }) {
-  console.log(course);
+  // console.log(course);
 
   return (
     <div className="card bg-base-100 w-full shadow-xl">

@@ -1,14 +1,12 @@
-
-import './App.css'
+import "./App.css";
+import Banner from "./components/ui/Banner";
 
 function App() {
-  
-
   return (
-    <div className='min-h-screen'>
-      <h1>Hello</h1>
+    <div className="min-h-screen">
+      <Banner />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

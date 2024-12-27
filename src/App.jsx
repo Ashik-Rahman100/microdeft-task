@@ -1,14 +1,13 @@
 
 import './App.css'
-import MainLayout from './components/layout/MainLayout'
 
 function App() {
   
 
   return (
-    <>
-      <MainLayout />
-    </>
+    <div className='min-h-screen'>
+      <h1>Hello</h1>
+    </div>
   )
 }
 

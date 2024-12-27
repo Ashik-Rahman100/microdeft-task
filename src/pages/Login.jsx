@@ -36,7 +36,7 @@ export default function Login() {
         // save token
         setTokenInCookie(result?.data?.token);
         toast.success(result?.status_message);
-        router("/courses")
+        router("/all-courses")
       } else {
         toast.error(`Error: Something went wrong`);
       }

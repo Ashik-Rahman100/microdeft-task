@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import MainLayout from "../components/layout/MainLayout";
 import ProtectedRoute from "../components/layout/ProtectedRoute";
-import Courses from "../pages/Courses";
+import AllCourses from "../pages/AllCourses";
+import CreateCourse from "../pages/CreateCourse";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 
@@ -16,12 +17,24 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/courses",
+        path: "/all-courses",
         element: (
           <ProtectedRoute>
-            <Courses />
+            <AllCourses />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "/create-course",
+        element: (
+          <ProtectedRoute>
+            <CreateCourse />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "*",
+        element: <h2>404 Not Found</h2>,
       },
     ],
   },
@@ -33,6 +46,7 @@ const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
+ 
 ]);
 
 export default router;

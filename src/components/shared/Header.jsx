@@ -5,7 +5,7 @@ import { LocalStorageUtil } from "../../utils/localStorage";
 export default function Header() {
   const route = useNavigate();
   const user = LocalStorageUtil.get("user");
-  console.log("user", user);
+  // console.log("user", user);
   const logOut = () => {
     LocalStorageUtil.remove("user");
     route("/login");
@@ -33,17 +33,22 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content text-white bg-neutral  z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
+            <li className="font-bold">
               <Link to="/">HOME</Link>
             </li>
-            <li>
+            {/* <li className="font-bold">
               <Link to="/about">ABOUT</Link>
-            </li>
+            </li> */}
             {user && (
-              <li>
-                <Link to="/courses">COURSES</Link>
+              <li className="font-bold">
+                <Link to="/all-courses">COURSES</Link>
+              </li>
+            )}
+            {user && (
+              <li className="font-bold">
+                <Link to="/create-course">CREATE COURSE</Link>
               </li>
             )}
           </ul>
@@ -55,15 +60,20 @@ export default function Header() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          <li className="font-bold">
             <Link to="/">HOME</Link>
           </li>
-          <li>
+          {/* <li className="font-bold">
             <Link to="/about">ABOUT</Link>
-          </li>
+          </li> */}
           {user && (
-            <li>
-              <Link to="/courses">COURSES</Link>
+            <li className="font-bold">
+              <Link to="/all-courses">COURSES</Link>
+            </li>
+          )}
+          {user && (
+            <li className="font-bold">
+              <Link to="/create-course">CREATE COURSE</Link>
             </li>
           )}
         </ul>
@@ -85,7 +95,7 @@ export default function Header() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-neutral text-white  z-[1] mt-5 w-52 p-4 shadow"
             >
               <li>
                 <a className="justify-between">
@@ -96,7 +106,7 @@ export default function Header() {
               <li>
                 <a>Settings</a>
               </li>
-              <li>
+              <li className="bg-red-500 text-white">
                 <a onClick={() => logOut()}>Logout</a>
               </li>
             </ul>
